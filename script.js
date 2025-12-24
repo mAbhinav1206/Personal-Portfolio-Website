@@ -28,7 +28,7 @@ hamburger.addEventListener("click", () => {
 const words = [
     "Full Stack Web Developer",
     "Coding Enthusiast",
-    "Video Editor"
+    "Learning AI"
 ];
 
 const typingText = document.getElementById("typing-text");
