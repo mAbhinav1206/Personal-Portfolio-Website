@@ -218,21 +218,29 @@ section {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
 
-/* Typing Effect in hero section */
-.subtitle {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    opacity: 0.85;
-}
+    /* Typing Effect in hero section */
+    .subtitle {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        opacity: 0.85;
+    }
 
-.cursor {
-    display: inline-block;
-    margin-left: 4px;
-    animation: blink 1s infinite;
-}
+    .cursor {
+        display: inline-block;
+        margin-left: 4px;
+        animation: blink 1s infinite;
+    }
 
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    50.01%, 100% { opacity: 0; }
-}
+    @keyframes blink {
+
+        0%,
+        50% {
+            opacity: 1;
+        }
+
+        50.01%,
+        100% {
+            opacity: 0;
+        }
+    }
 }
