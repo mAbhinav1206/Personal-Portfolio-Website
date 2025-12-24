@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -108,6 +112,7 @@ body {
 /* SECTIONS */
 section {
     padding: 100px 8vw;
+    scroll-margin-top: 120px;
 }
 
 .section-title {
