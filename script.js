@@ -62,3 +62,61 @@ const Observer = new IntersectionObserver(
 );
 
 reveals.forEach(el => Observer.observe(el));
+
+/* ================= HERO ORBIT ================= */
+
+const orbitItems = document.querySelectorAll(".orbit-item");
+
+if (orbitItems.length) {
+    let angle = 0;
+
+    function getRadius() {
+        // You can tweak the breakpoint if you want
+        return window.innerWidth <= 768 ? 150 : 180;
+    }
+
+    function rotateOrbit() {
+        const radius = getRadius();
+        const step = (2 * Math.PI) / orbitItems.length;
+
+        orbitItems.forEach((item, index) => {
+            const a = angle + index * step;
+            const x = Math.cos(a) * radius;
+            const y = Math.sin(a) * radius;
+
+            item.style.transform =
+                `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+        });
+
+        angle += 0.008;
+        requestAnimationFrame(rotateOrbit);
+    }
+
+    rotateOrbit();
+}
+
+/* ================= 3D CURSOR EFFECT (DESKTOP ONLY) ================= */
+
+const orbitWrapper = document.querySelector(".orbit-wrapper");
+const tiltLayer = document.querySelector(".orbit-tilt");
+
+const isDesktop =
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+if (orbitWrapper && tiltLayer && isDesktop) {
+    orbitWrapper.addEventListener("mousemove", (e) => {
+        const rect = orbitWrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateY = ((x / rect.width) - 0.5) * 14;
+        const rotateX = -((y / rect.height) - 0.5) * 14;
+
+        tiltLayer.style.transform =
+            `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    orbitWrapper.addEventListener("mouseleave", () => {
+        tiltLayer.style.transform = "rotateX(0deg) rotateY(0deg)";
+    });
+}

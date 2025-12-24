@@ -99,10 +99,11 @@ body {
     margin-top: 10px;
 }
 
-.hero-image img {
+.hero-image > img:not(.center-image) {
     width: min(400px, 80vw);
     border-radius: 50%;
 }
+
 
 /* SECTIONS */
 section {
@@ -259,4 +260,100 @@ section {
     100% {
         opacity: 0;
     }
+}
+
+/* ================= HERO ORBIT ================= */
+
+.hero-image {
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.orbit-wrapper {
+    position: relative;
+    width: 420px;
+    height: 420px;
+}
+
+.center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 290px;
+    height: 290px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.orbit {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.orbit-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35), 0 0 12px rgba(159, 211, 255, 0.35);
+}
+
+.orbit-item img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .orbit-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+
+    .center-image {
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+    }
+}
+
+/* ================= 3D CURSOR EFFECT (DESKTOP ONLY) ================= */
+
+@media (hover: hover) and (pointer: fine) {
+    .orbit-wrapper {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        transition: transform 0.25s ease-out;
+        will-change: transform;
+    }
+}
+/* ================= 3D TILT LAYER ================= */
+
+@media (hover: hover) and (pointer: fine) {
+    .orbit-wrapper {
+        perspective: 500px;
+    }
+
+    .orbit-tilt {
+        transform-style: preserve-3d;
+        transition: transform 0.15s ease-out;
+        will-change: transform;
+    }
+}
+/* ===== FIX 3D TILT POSITIONING ===== */
+
+.orbit-tilt {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    transform-origin: center center;
 }
