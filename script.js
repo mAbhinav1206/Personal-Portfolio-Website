@@ -24,3 +24,41 @@ hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
+// Typing Effect in Hero Section
+const words = [
+    "Full Stack Web Developer",
+    "Coding Enthusiast",
+    "Video Editor"
+];
+
+const typingText = document.getElementById("typing-text");
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+        typingText.textContent = currentWord.slice(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentWord.length) {
+            setTimeout(() => isDeleting = true, 1500);
+        }
+    } else {
+        typingText.textContent = currentWord.slice(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+
+    const speed = isDeleting ? 60 : 100;
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();
