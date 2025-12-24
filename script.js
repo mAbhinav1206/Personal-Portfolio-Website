@@ -1,20 +1,3 @@
-const cards = document.querySelectorAll(".profile-card");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, { threshold: 0.2 });
-
-cards.forEach(card => {
-    card.style.opacity = 0;
-    card.style.transform = "translateY(100px)";
-    observer.observe(card);
-});
-
 // HAMBURGER MENU
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
@@ -60,5 +43,22 @@ function typeEffect() {
     const speed = isDeleting ? 60 : 100;
     setTimeout(typeEffect, speed);
 }
-
 typeEffect();
+
+// Scroll-reveal
+const reveals = document.querySelectorAll(".reveal");
+
+const Observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+reveals.forEach(el => Observer.observe(el));
