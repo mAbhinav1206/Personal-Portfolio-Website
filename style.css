@@ -64,7 +64,7 @@ body {
 /* Scroll-Reveal */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(80px);
     transition: opacity 1.2s ease, transform 1.2s ease;
 }
 .reveal.active {
