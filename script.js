@@ -121,22 +121,42 @@ if (orbitWrapper && tiltLayer && isDesktop) {
     });
 }
 
-/* ================= CONTACT FORM UX ================= */
+/* ================= EMAILJS CONTACT FORM ================= */
 
-const contactForm = document.querySelector(".contact-form");
+(function () {
+    emailjs.init("l6eAlSEiFQbx76z8Z"); // 👈 paste public key here
+})();
 
-if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+const form = document.getElementById("contact-form");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const button = contactForm.querySelector(".submit-btn");
-        button.textContent = "Sent ✔";
+        const button = form.querySelector(".submit-btn");
+        button.textContent = "Sending...";
         button.disabled = true;
 
-        setTimeout(() => {
-            contactForm.reset();
-            button.textContent = "Send Message";
-            button.disabled = false;
-        }, 2500);
+        emailjs.sendForm(
+            "service_04prk4b",   // 👈 service ID
+            "template_2yf44gp",  // 👈 template ID
+            this
+        ).then(
+            () => {
+                button.textContent = "Sent ✔";
+                form.reset();
+
+                setTimeout(() => {
+                    button.textContent = "Send Message";
+                    button.disabled = false;
+                }, 2500);
+            },
+            (error) => {
+                console.error("EmailJS Error:", error);
+                button.textContent = "Failed ❌";
+                button.disabled = false;
+            }
+        );
     });
 }
+
