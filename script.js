@@ -120,3 +120,23 @@ if (orbitWrapper && tiltLayer && isDesktop) {
         tiltLayer.style.transform = "rotateX(0deg) rotateY(0deg)";
     });
 }
+
+/* ================= CONTACT FORM UX ================= */
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const button = contactForm.querySelector(".submit-btn");
+        button.textContent = "Sent ✔";
+        button.disabled = true;
+
+        setTimeout(() => {
+            contactForm.reset();
+            button.textContent = "Send Message";
+            button.disabled = false;
+        }, 2500);
+    });
+}
