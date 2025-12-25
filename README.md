@@ -30,7 +30,7 @@ It showcases my skills, projects, and contact information with a modern UI and s
 
 <pre>Personal-portfolio-Website/
 │
-├── index.html
+├── mainpage.html
 ├── style.css
 ├── script.js
 ├── Assets/
