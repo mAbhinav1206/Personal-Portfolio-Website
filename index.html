@@ -112,8 +112,31 @@
 
         <section id="projects" class="projects reveal">
             <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">More coming soon 🚧</p>
+            <p class="section-subtitle">Some things I’ve built 👨‍💻</p>
+
+            <div class="projects-grid">
+
+                <div class="project-card" data-project="1" tabindex="0">
+                    <img src="Assets/project1.png" alt="Project 1" loading="lazy">
+                    <h3>Assignment Portal</h3>
+                    <p>Full-stack web app</p>
+                </div>
+
+                <div class="project-card" data-project="2" tabindex="0">
+                    <img src="Assets/project2.png" alt="Project 2" loading="lazy">
+                    <h3>Expense Tracker</h3>
+                    <p>MERN based app</p>
+                </div>
+
+                <div class="project-card" data-project="3" tabindex="0">
+                    <img src="Assets/project3.png" alt="Project 3" loading="lazy">
+                    <h3>Portfolio Website</h3>
+                    <p>Animated personal site</p>
+                </div>
+
+            </div>
         </section>
+
 
         <section id="certificates" class="certificates reveal">
             <h2 class="section-title">Certificates</h2>
@@ -182,6 +205,23 @@
         </form>
     </section>
 
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <img id="modalImage" src="" alt="Project preview">
+
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+
+            <div class="modal-tech" id="modalTech"></div>
+
+            <div class="modal-links">
+                <a id="modalLive" target="_blank" class="btn">Live Demo</a>
+                <a id="modalGit" target="_blank" class="btn">GitHub</a>
+            </div>
+        </div>
+    </div>
 
 
     <footer class="footer">

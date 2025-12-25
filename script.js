@@ -162,3 +162,73 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/* ================= PROJECT MODAL ================= */
+
+const projects = {
+    1: {
+        title: "Assignment Portal",
+        image: "Assets/project1.png",
+        description: "A full-stack assignment submission portal with authentication and email notifications.",
+        tech: ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
+        live: "#",
+        git: "#"
+    },
+    2: {
+        title: "Expense Tracker",
+        image: "Assets/project2.png",
+        description: "Track daily expenses with charts and persistent storage using MERN stack.",
+        tech: ["React", "Node.js", "MongoDB"],
+        live: "#",
+        git: "#"
+    },
+    3: {
+        title: "Portfolio Website",
+        image: "Assets/project3.png",
+        description: "Animated personal portfolio with orbit effects, EmailJS contact form and smooth UX.",
+        tech: ["HTML", "CSS", "JavaScript"],
+        live: "#",
+        git: "#"
+    }
+};
+
+const modal = document.getElementById("projectModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalTech = document.getElementById("modalTech");
+const modalLive = document.getElementById("modalLive");
+const modalGit = document.getElementById("modalGit");
+
+document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const data = projects[card.dataset.project];
+
+        modalImage.src = data.image;
+        modalTitle.textContent = data.title;
+        modalDescription.textContent = data.description;
+        modalLive.href = data.live;
+        modalGit.href = data.git;
+
+        modalTech.innerHTML = "";
+        data.tech.forEach(t => {
+            const span = document.createElement("span");
+            span.textContent = t;
+            modalTech.appendChild(span);
+        });
+
+        modal.classList.add("active");
+    });
+});
+
+document.querySelector(".close-modal").addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.remove("active");
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") modal.classList.remove("active");
+});
