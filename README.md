@@ -6,7 +6,7 @@ It showcases my skills, projects, and contact information with a modern UI and s
 ---
 
 ## 🚀 Live Demo
-🔗 https://github.com/mAbhinav1206/Personal-Portfolio-Website.git
+🔗 https://mabhinav1206.github.io/Personal-Portfolio-Website/
 
 ---
 
@@ -27,16 +27,17 @@ It showcases my skills, projects, and contact information with a modern UI and s
 ---
 
 ## 📂 Project Structure
-
-<pre>Personal-portfolio-Website/
+<pre>
+Personal-portfolio-Website/
 │
-├── mainpage.html
+├── index.html
 ├── style.css
 ├── script.js
 ├── Assets/
 │ ├── images
 │ └── icons
-└── README.md</pre>
+└── README.md
+</pre>
 
 ---
 
