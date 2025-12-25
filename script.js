@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 button.disabled = true;
 
                 emailjs.sendForm(
-                    "service_04prk4b",
+                    "service_co1su1b",
                     "template_2yf44gp",
                     form
                 )
