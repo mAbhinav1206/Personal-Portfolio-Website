@@ -28,7 +28,7 @@ It showcases my skills, projects, and contact information with a modern UI and s
 
 ## 📂 Project Structure
 
-Personal-portfolio-Website/
+<pre>Personal-portfolio-Website/
 │
 ├── index.html
 ├── style.css
@@ -36,7 +36,7 @@ Personal-portfolio-Website/
 ├── Assets/
 │ ├── images
 │ └── icons
-└── README.md
+└── README.md</pre>
 
 ---
 
