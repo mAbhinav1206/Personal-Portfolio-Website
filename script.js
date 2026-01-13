@@ -184,11 +184,11 @@ const projects = {
     },
     3: {
         title: "Portfolio Website",
-        image: "Assets/project3.png",
-        description: "Animated personal portfolio with orbit effects, EmailJS contact form and smooth UX.",
+        image: "Assets/Portfolio_Website.jpeg",
+        description: "Animated personal portfolio with EmailJS contact form and smooth UX.",
         tech: ["HTML", "CSS", "JavaScript"],
-        live: "#",
-        git: "#"
+        live: "https://mabhinav1206.github.io/Personal-Portfolio-Website/",
+        git: "https://github.com/mAbhinav1206/Personal-Portfolio-Website.git"
     }
 };
 
