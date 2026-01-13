@@ -188,7 +188,7 @@ const projects = {
         description: "Animated personal portfolio with EmailJS contact form and smooth UX.",
         tech: ["HTML", "CSS", "JavaScript"],
         live: "https://mabhinav1206.github.io/Personal-Portfolio-Website/",
-        git: "https://github.com/mAbhinav1206/Personal-Portfolio-Website.git"
+        git: "https://github.com/mAbhinav1206"
     }
 };
 
