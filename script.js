@@ -168,11 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const projects = {
     1: {
         title: "Assignment Portal",
-        image: "Assets/project1.png",
+        image: "Assets/AssignifyDashboard.png",
         description: "A full-stack assignment submission portal with authentication and email notifications.",
-        tech: ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
-        live: "#",
-        git: "#"
+        tech: ["React", "Tailwind CSS", "EmailJS", "Node.js", "MongoDB"],
+        live: "Coming Soon",
+        git: "https://github.com/mAbhinav1206/Assignify---an-assignment-portal.git"
     },
     2: {
         title: "Expense Tracker",
@@ -186,7 +186,7 @@ const projects = {
         title: "Portfolio Website",
         image: "Assets/Portfolio_Website.jpeg",
         description: "Animated personal portfolio with EmailJS contact form and smooth UX.",
-        tech: ["HTML", "CSS", "JavaScript"],
+        tech: ["HTML", "CSS", "JavaScript", "EmailJS"],
         live: "https://mabhinav1206.github.io/Personal-Portfolio-Website/",
         git: "https://github.com/mAbhinav1206"
     }
