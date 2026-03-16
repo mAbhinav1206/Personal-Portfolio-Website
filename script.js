@@ -171,7 +171,7 @@ const projects = {
         image: "Assets/AssignifyDashboard.png",
         description: "A full-stack assignment submission portal with authentication and email notifications.",
         tech: ["React", "Tailwind CSS", "EmailJS", "Node.js", "MongoDB"],
-        live: "Coming Soon",
+        live: "#",
         git: "https://github.com/mAbhinav1206/Assignify---an-assignment-portal.git"
     },
     2: {
