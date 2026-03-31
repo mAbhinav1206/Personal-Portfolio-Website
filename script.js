@@ -175,16 +175,16 @@ const projects = {
         git: "https://github.com/mAbhinav1206/Assignify---an-assignment-portal.git"
     },
     2: {
-        title: "Expense Tracker",
-        image: "Assets/project2.png",
-        description: "Track daily expenses with charts and persistent storage using MERN stack.",
-        tech: ["React", "Node.js", "MongoDB"],
+        title: "WorKo",
+        image: "Assets/WorKo.png",
+        description: "An on-demand home service app with real-time tracking and payment integration.",
+        tech: ["React", "Tailwind CSS"],
         live: "#",
         git: "#"
     },
     3: {
         title: "Portfolio Website",
-        image: "Assets/Portfolio_Website.jpeg",
+        image: "Assets/PortfolioWebsite.png",
         description: "Animated personal portfolio with EmailJS contact form and smooth UX.",
         tech: ["HTML", "CSS", "JavaScript", "EmailJS"],
         live: "https://mabhinav1206.github.io/Personal-Portfolio-Website/",
