@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ================= TYPING EFFECT ================= */
     const words = [
         "Full Stack Web Developer",
-        "Coding Enthusiast",
-        "AI Enthusiast"
+        "Coder",
+        "AI Engineer",
     ];
 
     const typingText = document.getElementById("typing-text");
@@ -232,3 +232,5 @@ modal.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") modal.classList.remove("active");
 });
+
+
