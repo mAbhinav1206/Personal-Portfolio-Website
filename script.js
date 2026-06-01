@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Full Stack Web Developer",
         "Coder",
         "AI Engineer",
+        "Freelancer"
     ];
 
     const typingText = document.getElementById("typing-text");
