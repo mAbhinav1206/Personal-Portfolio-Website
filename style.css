@@ -418,6 +418,10 @@ section {
     color: #61dafb;
 }
 
+.resume_capsule{
+    margin-top: 15px;
+    cursor: pointer;
+}
 
 /* ================= CONTACT SECTION ================= */
 

@@ -244,4 +244,11 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") modal.classList.remove("active");
 });
 
+// Resume Download
 
+document.getElementById("downloadResume").addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = "abhinav_mishra_resume.html";
+    link.download = "Abhinav_Mishra_Resume.html";
+    link.click();
+});
