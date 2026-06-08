@@ -181,7 +181,7 @@ const projects = {
         title: "WorKo",
         image: "Assets/WorKo.png",
         description: "An on-demand home service app with real-time tracking and payment integration.",
-        tech: ["React", "Tailwind CSS"],
+        tech: ["React", "Tailwind"],
         live: "#",
         git: "#"
     },
@@ -190,8 +190,16 @@ const projects = {
         image: "Assets/PortfolioWebsite.png",
         description: "Animated personal portfolio with EmailJS contact form and smooth UX.",
         tech: ["HTML", "CSS", "JavaScript", "EmailJS"],
-        live: "https://mabhinav1206.github.io/Personal-Portfolio-Website/",
-        git: "https://github.com/mAbhinav1206"
+        live: "https://abhinavmishraportfolio.vercel.app/",
+        git: "https://github.com/mAbhinav1206/Personal-Portfolio-Website"
+    },
+    4: {
+        title: "Electrical Shop Website",
+        image: "Assets/ElectricalShop.png",
+        description: "A full-stack working website for electrical shop for ordering electrical items via whatsapp, made with Typescript, tailwind & Supabase.",
+        tech: ["Typescript", "Tailwind", "Supabase", "Vercel"],
+        live: "https://https://shreebalajielectricals.vercel.app/",
+        git: "https://github.com/mAbhinav1206/ElectricalShopWebsite"
     }
 };
 
