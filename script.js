@@ -198,7 +198,7 @@ const projects = {
         image: "Assets/ElectricalShop.png",
         description: "A full-stack working website for electrical shop for ordering electrical items via whatsapp, made with Typescript, tailwind & Supabase.",
         tech: ["Typescript", "Tailwind", "Supabase", "Vercel"],
-        live: "https://https://shreebalajielectricals.vercel.app/",
+        live: "https://shreebalajielectricals.vercel.app/",
         git: "https://github.com/mAbhinav1206/ElectricalShopWebsite"
     }
 };
