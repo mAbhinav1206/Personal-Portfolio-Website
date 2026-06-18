@@ -2,20 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abhinav Mishra — AI engineer and full-stack developer building thoughtful digital products.">
+    <meta name="theme-color" content="#050505">
     <title>Abhinav Mishra | Portfolio</title>
-    <link rel="icon" href="Assets/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Assets/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="site-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="grid-layer"></div>
+        <div class="noise-layer"></div>
+        <div class="cursor-glow"></div>
+    </div>
 
-    <header class="navbar">
-        <div class="logo">Abhinav Mishra</div>
+    <a class="skip-link" href="#home">Skip to content</a>
 
-        <nav>
+    <header class="navbar" id="navbar">
+        <a class="logo" href="#home" aria-label="Abhinav Mishra — Home">
+            <span class="logo-mark">AM</span>
+            <span class="logo-name">Abhinav Mishra</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -24,273 +43,431 @@
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
-        <button class="hamburger" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
+        <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main>
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy reveal" data-reveal="left">
+                <!-- <div class="availability"><span></span>Available for opportunities</div> -->
+                <p class="eyebrow">Hi, I’m</p>
+                <h1 id="hero-title">Abhinav <span>Mishra</span></h1>
+                <p class="subtitle"><span id="typing-text"></span><span class="cursor">|</span></p>
+                <p class="hero-summary">Computer Science &amp; AI undergraduate building production-grade full-stack
+                    applications with a bias for thoughtful interfaces and real-world impact.</p>
 
-        <section id="home" class="hero reveal">
-            <div class="hero-text">
-                <p class="intro">Hi, I’m</p>
-                <h1>Abhinav <span>Mishra</span></h1>
-                <p class="subtitle">
-                    <span id="typing-text"></span><span class="cursor">|</span>
-                </p>
-                <div class="tech-capsules">
-                    <span class="capsule react">
-                        <img src="Assets/react.png" alt="React">
-                        React
-                    </span>
-                    <span class="capsule nodejs">
-                        <img src="Assets/nodejs.png" alt="Node.js">
-                        Node.js
-                    </span>
-                    <span class="capsule js">
-                        <img src="Assets/js.png" alt="JS">
-                        JavaScript
-                    </span>
-                    <span class="capsule mongodb">
-                        <img src="Assets/mongodb.svg" alt="MongoDB">
-                        MongoDB
-                    </span>
-                </div>
-                <div class="resume_capsule">
-                    <span class="capsule resume" id="downloadResume">
+                <div class="hero-actions">
+                    <button class="button button-primary" id="downloadResume" type="button">
                         Download Resume
-                    </span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14" />
+                        </svg>
+                    </button>
+                    <a class="button button-secondary" href="#projects">
+                        View Projects
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
                 </div>
 
+                <div class="tech-capsules" aria-label="Core technologies">
+                    <span class="capsule blue"><img src="Assets/react.png" alt="">React</span>
+                    <span class="capsule green"><img src="Assets/nodejs.png" alt="">Node.js</span>
+                    <span class="capsule blue"><img src="Assets/typescript.png" alt="">TypeScript</span>
+                    <span class="capsule green"><img src="Assets/mongodb.svg" alt="">MongoDB</span>
+                </div>
             </div>
 
-            <div class="hero-image">
+            <div class="hero-visual reveal" data-reveal="right" aria-label="Abhinav surrounded by technology icons">
+                <div class="visual-halo"></div>
                 <div class="orbit-wrapper">
+                    <div class="orbit-ring orbit-ring-one"></div>
+                    <div class="orbit-ring orbit-ring-two"></div>
                     <div class="orbit-tilt">
-
                         <div class="orbit">
-                            <div class="orbit-item"><img src="Assets/html.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/css.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/js.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/nodejs.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/swift.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/java.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/c.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/php.png" loading="lazy">
-                            </div>
-                            <div class="orbit-item"><img src="Assets/python.png" loading="lazy">
-                            </div>
+                            <div class="orbit-item"><img src="Assets/html.png" alt="HTML" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/css.png" alt="CSS" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/js.png" alt="JavaScript" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/nodejs.png" alt="Node.js" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/swift.png" alt="Swift" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/java.png" alt="Java" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/c.png" alt="C" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/php.png" alt="PHP" loading="lazy"></div>
+                            <div class="orbit-item"><img src="Assets/python.png" alt="Python" loading="lazy"></div>
                         </div>
-
-                        <img class="center-image" src="Assets/abhinav.jpg" loading="lazy" alt="Abhinav Mishra">
+                        <div class="portrait-shell">
+                            <img class="center-image" src="Assets/abhinav.jpg" alt="Abhinav Mishra" loading="eager">
+                            <span class="portrait-shine"></span>
+                        </div>
                     </div>
                 </div>
+                <!-- <div class="floating-note note-code"><span>&lt;/&gt;</span> Building for the web</div>
+                <div class="floating-note note-ai"><span>✦</span> AI + Full Stack</div> -->
             </div>
 
-
+            <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
+                <span>Scroll</span><i></i>
+            </a>
         </section>
 
-        <section id="projects" class="projects reveal">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">Some things I've built 👨‍💻</p>
+        <section id="about" class="about section-shell" aria-labelledby="about-title">
+            <div class="section-heading reveal">
+                <p class="section-kicker"><span>01</span> About</p>
+                <h2 class="section-title" id="about-title">Engineer by craft.<br><span>Builder by instinct.</span></h2>
+            </div>
+
+            <div class="about-layout">
+                <article class="glass-panel about-story reveal" data-reveal="left">
+                    <div class="panel-label"><span></span>Personal introduction</div>
+                    <p>Computer Science &amp; AI undergraduate with demonstrated ability to architect and ship
+                        production-grade full-stack web applications across React, Node.js, TypeScript, and cloud-native
+                        tooling.</p>
+                    <p>Four shipped projects — including a live freelance deployment — reflect a bias for building real
+                        things over tutorial work. Consistently deepening fluency in Data Structures &amp; Algorithms
+                        through competitive programming on LeetCode and Codeforces.</p>
+                    <p>Seeking a software engineering internship to contribute meaningfully to product teams and
+                        accelerate technical growth.</p>
+                </article>
+
+                <div class="about-side">
+                    <article class="glass-panel education-card reveal" data-reveal="right">
+                        <div class="panel-icon">
+                            <svg aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="m3 10 9-5 9 5-9 5-9-5Zm4 2.5V17c3 2.5 7 2.5 10 0v-4.5M21 10v6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="panel-label">Education</p>
+                            <h3>GL Bajaj Institute of Technology &amp; Management</h3>
+                            <p>B.Tech. · Computer Science &amp; Artificial Intelligence</p>
+                            <div class="education-meta"><span>Expected May 2028</span><span>CGPA 7.5 / 10</span></div>
+                        </div>
+                    </article>
+
+                    <div class="stats-grid reveal" data-reveal="right">
+                        <div class="stat-card"><strong data-count="4">0</strong><span>Shipped projects</span></div>
+                        <div class="stat-card"><strong data-count="7.5" data-decimals="1">0</strong><span>Current
+                                CGPA</span></div>
+                        <div class="stat-card"><strong data-count="2028">0</strong><span>Graduation year</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section-shell" aria-labelledby="skills-title">
+            <div class="section-heading section-heading-split reveal">
+                <div>
+                    <p class="section-kicker"><span>02</span> Technical toolkit</p>
+                    <h2 class="section-title" id="skills-title">Skills built for<br><span>shipping products.</span></h2>
+                </div>
+                <p>From interface craft to backend architecture, a practical stack shaped by building complete
+                    applications.</p>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card reveal-card" data-accent="cyan">
+                    <div class="skill-card-head"><span>01</span><img src="Assets/react.png" alt="" loading="lazy"></div>
+                    <h3>Frontend</h3>
+                    <p>Responsive interfaces with reusable, component-led architecture.</p>
+                    <div class="skill-list"><span>React</span><span>HTML5</span><span>CSS3</span><span>Tailwind
+                            CSS</span><span>Responsive Design</span></div>
+                    <div class="skill-meter"><i style="--level: 88%"></i></div>
+                </article>
+
+                <article class="skill-card reveal-card" data-accent="purple">
+                    <div class="skill-card-head"><span>02</span><img src="Assets/nodejs.png" alt="" loading="lazy">
+                    </div>
+                    <h3>Backend &amp; APIs</h3>
+                    <p>Secure application logic, API design, and cloud-connected data.</p>
+                    <div class="skill-list"><span>Node.js</span><span>Express.js</span><span>REST
+                            APIs</span><span>JWT</span><span>MongoDB</span><span>Supabase</span></div>
+                    <div class="skill-meter"><i style="--level: 80%"></i></div>
+                </article>
+
+                <article class="skill-card reveal-card" data-accent="green">
+                    <div class="skill-card-head"><span>03</span><img src="Assets/java.png" alt="" loading="lazy"></div>
+                    <h3>Languages</h3>
+                    <p>Strong browser fundamentals with typed and object-oriented programming.</p>
+                    <div class="skill-list"><span>Java</span><span>JavaScript ES2022+</span><span>TypeScript</span>
+                    </div>
+                    <div class="skill-meter"><i style="--level: 83%"></i></div>
+                </article>
+
+                <article class="skill-card reveal-card" data-accent="orange">
+                    <div class="skill-card-head"><span>04</span><img src="Assets/github_color.png" alt=""
+                            loading="lazy"></div>
+                    <h3>Tools &amp; Concepts</h3>
+                    <p>Workflow, deployment, algorithms, and architecture for maintainable products.</p>
+                    <div class="skill-list">
+                        <span>Git</span><span>GitHub</span><span>Vercel</span><span>CI/CD</span><span>DSA</span><span>OOP</span>
+                    </div>
+                    <div class="skill-meter"><i style="--level: 78%"></i></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section-shell" aria-labelledby="projects-title">
+            <div class="section-heading section-heading-split reveal">
+                <div>
+                    <p class="section-kicker"><span>03</span> Selected work</p>
+                    <h2 class="section-title" id="projects-title">Projects</h2>
+                </div>
+                <p>Some things I've built 👨‍💻</p>
+            </div>
 
             <div class="projects-grid">
-                <article class="project-card project-reveal" data-accent="blue">
+                <article class="project-card reveal-card" data-accent="blue">
                     <div class="project-visual">
-                        <img src="Assets/AssignifyDashboard.png" alt="Assignify assignment portal dashboard" loading="lazy">
+                        <img src="Assets/AssignifyDashboard.png" alt="Assignify assignment portal dashboard"
+                            loading="lazy">
                         <div class="project-image-overlay"></div>
-                        <span class="project-category">
-                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 9 4 12l4 3m8-6 4 3-4 3m-2-9-4 12"/></svg>
-                            Full Stack
-                        </span>
+                        <span class="project-category">Full Stack</span>
                     </div>
                     <div class="project-content">
-                        <div class="project-heading">
-                            <span class="project-number">01</span>
+                        <div class="project-heading"><span>01</span>
                             <h3>Assignment Portal</h3>
                         </div>
                         <p>A full-stack platform for students to submit assignments and keep teachers in the loop.</p>
                         <ul class="project-stack" aria-label="Technologies used">
-                            <li>React</li><li>Node.js</li><li>MongoDB</li><li>Tailwind</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
+                            <li>Tailwind</li>
                         </ul>
                         <div class="project-actions">
-                            <button class="project-button project-button-primary" type="button" disabled title="Demo coming soon">Live Demo <span aria-hidden="true">↗</span></button>
-                            <a class="project-button project-button-secondary" href="https://github.com/mAbhinav1206/Assignify---an-assignment-portal" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                            <button class="project-button project-button-primary" type="button" disabled
+                                title="Demo coming soon">Live Demo <span>↗</span></button>
+                            <a class="project-button project-button-secondary"
+                                href="https://github.com/mAbhinav1206/Assignify---an-assignment-portal" target="_blank"
+                                rel="noreferrer">GitHub <span>↗</span></a>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card project-reveal" data-accent="purple">
+                <article class="project-card reveal-card" data-accent="purple">
                     <div class="project-visual">
                         <img src="Assets/WorKo.png" alt="WorKo home services app interface" loading="lazy">
                         <div class="project-image-overlay"></div>
-                        <span class="project-category">
-                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 4 7l8 4 8-4-8-4ZM4 12l8 4 8-4M4 17l8 4 8-4"/></svg>
-                            SaaS
-                        </span>
+                        <span class="project-category">SaaS</span>
                     </div>
                     <div class="project-content">
-                        <div class="project-heading">
-                            <span class="project-number">02</span>
+                        <div class="project-heading"><span>02</span>
                             <h3>WorKo</h3>
                         </div>
                         <p>An on-demand home services experience built for fast discovery and effortless booking.</p>
                         <ul class="project-stack" aria-label="Technologies used">
-                            <li>React</li><li>Tailwind</li><li>JavaScript</li>
+                            <li>React</li>
+                            <li>Tailwind</li>
+                            <li>JavaScript</li>
                         </ul>
                         <div class="project-actions">
-                            <button class="project-button project-button-primary" type="button" disabled title="Demo coming soon">Live Demo <span aria-hidden="true">↗</span></button>
-                            <button class="project-button project-button-secondary" type="button" disabled title="Repository coming soon">GitHub <span aria-hidden="true">↗</span></button>
+                            <button class="project-button project-button-primary" type="button" disabled
+                                title="Demo coming soon">Live Demo <span>↗</span></button>
+                            <a class="project-button project-button-secondary"
+                                href="https://github.com/aayushchoudhury111-hue/Worko" target="_blank"
+                                rel="noreferrer">GitHub <span>↗</span></a>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card project-reveal" data-accent="green">
+                <article class="project-card reveal-card" data-accent="green">
                     <div class="project-visual">
                         <img src="Assets/PortfolioWebsite.png" alt="Abhinav Mishra portfolio website" loading="lazy">
                         <div class="project-image-overlay"></div>
-                        <span class="project-category">
-                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4"/></svg>
-                            Portfolio
-                        </span>
+                        <span class="project-category">Portfolio</span>
                     </div>
                     <div class="project-content">
-                        <div class="project-heading">
-                            <span class="project-number">03</span>
+                        <div class="project-heading"><span>03</span>
                             <h3>Portfolio Website</h3>
                         </div>
-                        <p>An animated personal space with smooth interactions, responsive layouts, and a contact flow.</p>
+                        <p>An animated personal space with smooth interactions, responsive layouts, and a contact flow.
+                        </p>
                         <ul class="project-stack" aria-label="Technologies used">
-                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>EmailJS</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>EmailJS</li>
                         </ul>
                         <div class="project-actions">
-                            <a class="project-button project-button-primary" href="https://abhinavmishraportfolio.vercel.app/" target="_blank" rel="noreferrer">Live Demo <span aria-hidden="true">↗</span></a>
-                            <a class="project-button project-button-secondary" href="https://github.com/mAbhinav1206/Personal-Portfolio-Website" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                            <a class="project-button project-button-primary"
+                                href="https://abhinavmishraportfolio.vercel.app/" target="_blank" rel="noreferrer">Live
+                                Demo <span>↗</span></a>
+                            <a class="project-button project-button-secondary"
+                                href="https://github.com/mAbhinav1206/Personal-Portfolio-Website" target="_blank"
+                                rel="noreferrer">GitHub <span>↗</span></a>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card project-reveal" data-accent="orange">
+                <article class="project-card reveal-card" data-accent="orange">
                     <div class="project-visual">
-                        <img src="Assets/ElectricalShop.png" alt="Shree Balaji Electricals business website" loading="lazy">
+                        <img src="Assets/ElectricalShop.png" alt="Shree Balaji Electricals business website"
+                            loading="lazy">
                         <div class="project-image-overlay"></div>
-                        <span class="project-category">
-                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10h16v10H4V10Zm2-6h12l2 6H4l2-6Zm3 16v-6h6v6"/></svg>
-                            Business Website
-                        </span>
+                        <span class="project-category">Business Website</span>
                     </div>
                     <div class="project-content">
-                        <div class="project-heading">
-                            <span class="project-number">04</span>
+                        <div class="project-heading"><span>04</span>
                             <h3>Electrical Shop</h3>
                         </div>
-                        <p>A modern storefront for browsing electrical products and ordering directly through WhatsApp.</p>
+                        <p>A modern storefront for browsing electrical products and ordering directly through WhatsApp.
+                        </p>
                         <ul class="project-stack" aria-label="Technologies used">
-                            <li>TypeScript</li><li>Tailwind</li><li>Supabase</li><li>Vercel</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind</li>
+                            <li>Supabase</li>
+                            <li>Vercel</li>
                         </ul>
                         <div class="project-actions">
-                            <a class="project-button project-button-primary" href="https://shreebalajielectricals.vercel.app/" target="_blank" rel="noreferrer">Live Demo <span aria-hidden="true">↗</span></a>
-                            <a class="project-button project-button-secondary" href="https://github.com/mAbhinav1206/ElectricalShopWebsite" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                            <a class="project-button project-button-primary"
+                                href="https://shreebalajielectricals.vercel.app/" target="_blank" rel="noreferrer">Live
+                                Demo <span>↗</span></a>
+                            <a class="project-button project-button-secondary"
+                                href="https://github.com/mAbhinav1206/ElectricalShopWebsite" target="_blank"
+                                rel="noreferrer">GitHub <span>↗</span></a>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-
-        <section id="certificates" class="certificates reveal">
-            <h2 class="section-title">Certificates</h2>
-            <p class="section-subtitle">More coming soon 🚧</p>
-        </section>
-
-        <section id="profiles" class="profiles reveal">
-            <h2 class="section-title">My Profiles</h2>
-
-            <div class="card-grid reveal">
-
-                <article class="profile-card">
-                    <img src="Assets/instagram_color.png" loading="lazy" alt="Instagram">
-                    <h3>Instagram</h3>
-                    <a href="#" target="_blank" class="btn">Visit</a>
-                </article>
-
-                <article class="profile-card">
-                    <img src="Assets/github_color.png" loading="lazy" alt="GitHub">
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/mAbhinav1206" target="_blank" class="btn">Visit</a>
-                </article>
-
-                <article class="profile-card">
-                    <img src="Assets/linkedin_color.png" loading="lazy" alt="LinkedIn">
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/abhinavmishra1206" target="_blank" class="btn">Visit</a>
-                </article>
-
-                <article class="profile-card">
-                    <img src="Assets/Leetcode.jpeg" loading="lazy" alt="LeetCode">
-                    <h3>LeetCode</h3>
-                    <a href="https://leetcode.com/u/abh1navv_exe/" target="_blank" class="btn">Visit</a>
-                </article>
-
-                <article class="profile-card">
-                    <img src="Assets/codeforces.jpeg" loading="lazy" alt="CodeForces">
-                    <h3>CodeForces</h3>
-                    <a href="https://codeforces.com/profile/Abhinavmishra1206" target="_blank" class="btn">Visit</a>
-                </article>
-
+        <section id="certificates" class="certificates section-shell" aria-labelledby="certificates-title">
+            <div class="section-heading reveal">
+                <p class="section-kicker"><span>04</span> Achievements</p>
+                <h2 class="section-title" id="certificates-title">Certificates</h2>
+                <p class="section-subtitle">More coming soon 🚧</p>
+            </div>
+            <div class="certificate-empty reveal">
+                <div class="certificate-stack" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div>
+                    <p class="panel-label">Certificate archive</p>
+                    <h3>New milestones are on the way.</h3>
+                    <p>This space is being prepared for verified certificates and achievements.</p>
+                </div>
+                <span class="coming-soon">Coming soon</span>
             </div>
         </section>
 
+        <section id="profiles" class="profiles section-shell" aria-labelledby="profiles-title">
+            <div class="section-heading section-heading-split reveal">
+                <div>
+                    <p class="section-kicker"><span>05</span> Around the web</p>
+                    <h2 class="section-title" id="profiles-title">My Profiles</h2>
+                </div>
+                <p>Code, problem solving, professional updates, and the occasional glimpse beyond the terminal.</p>
+            </div>
+
+            <div class="profiles-grid">
+                <article class="profile-card reveal-card" data-platform="instagram">
+                    <div class="profile-icon"><img src="Assets/instagram_color.png" alt="" loading="lazy"></div>
+                    <div class="profile-copy">
+                        <p>Social</p>
+                        <h3>Instagram</h3><span>Personal profile</span>
+                    </div>
+                    <a href="#" target="_blank" rel="noreferrer" class="profile-link"
+                        aria-label="Visit Instagram profile">↗</a>
+                </article>
+                <article class="profile-card reveal-card" data-platform="github">
+                    <div class="profile-icon"><img src="Assets/github_color.png" alt="" loading="lazy"></div>
+                    <div class="profile-copy">
+                        <p>Code &amp; projects</p>
+                        <h3>GitHub</h3><span>@mAbhinav1206</span>
+                    </div>
+                    <a href="https://github.com/mAbhinav1206" target="_blank" rel="noreferrer" class="profile-link"
+                        aria-label="Visit GitHub profile">↗</a>
+                </article>
+                <article class="profile-card reveal-card" data-platform="linkedin">
+                    <div class="profile-icon"><img src="Assets/linkedin_color.png" alt="" loading="lazy"></div>
+                    <div class="profile-copy">
+                        <p>Professional network</p>
+                        <h3>LinkedIn</h3><span>Abhinav Mishra</span>
+                    </div>
+                    <a href="https://www.linkedin.com/in/abhinavmishra1206" target="_blank" rel="noreferrer"
+                        class="profile-link" aria-label="Visit LinkedIn profile">↗</a>
+                </article>
+                <article class="profile-card reveal-card" data-platform="leetcode">
+                    <div class="profile-icon"><img src="Assets/Leetcode.jpeg" alt="" loading="lazy"></div>
+                    <div class="profile-copy">
+                        <p>Problem solving</p>
+                        <h3>LeetCode</h3><span>Active practice</span>
+                    </div>
+                    <a href="https://leetcode.com/u/abh1navv_exe/" target="_blank" rel="noreferrer" class="profile-link"
+                        aria-label="Visit LeetCode profile">↗</a>
+                </article>
+                <article class="profile-card reveal-card" data-platform="codeforces">
+                    <div class="profile-icon"><img src="Assets/codeforces.jpeg" alt="" loading="lazy"></div>
+                    <div class="profile-copy">
+                        <p>Competitive programming</p>
+                        <h3>CodeForces</h3><span>Rated rounds</span>
+                    </div>
+                    <a href="https://codeforces.com/profile/Abhinavmishra1206" target="_blank" rel="noreferrer"
+                        class="profile-link" aria-label="Visit Codeforces profile">↗</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-shell" aria-labelledby="contact-title">
+            <div class="contact-shell reveal">
+                <div class="contact-intro">
+                    <p class="section-kicker"><span>06</span> Let’s connect</p>
+                    <h2 class="section-title" id="contact-title">Contact Me</h2>
+                    <p class="section-subtitle">Have a project or just want to say hi? 👋</p>
+                    <p class="contact-note">Tell me what you’re building, exploring, or looking for. I’ll get back to
+                        you as soon as I can.</p>
+                    <div class="contact-links">
+                        <a href="mailto:mabhinav1206@gmail.com"><span>✦</span>
+                            <div><small>Email</small>mabhinav1206@gmail.com</div><b>↗</b>
+                        </a>
+                        <a href="https://www.linkedin.com/in/abhinavmishra1206" target="_blank"
+                            rel="noreferrer"><span>in</span>
+                            <div><small>LinkedIn</small>Abhinav Mishra</div><b>↗</b>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input id="contact-name" type="text" name="name" placeholder=" " autocomplete="name" required>
+                        <label for="contact-name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="contact-email" type="email" name="email" placeholder=" " autocomplete="email"
+                            required>
+                        <label for="contact-email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="contact-message">Your Message</label>
+                    </div>
+                    <button type="submit" class="button button-primary submit-btn">
+                        <span>Send Message</span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="m4 4 17 8-17 8 3-8-3-8Zm3 8h14" />
+                        </svg>
+                    </button>
+                    <p class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <section id="contact" class="contact reveal">
-        <h2 class="section-title">Contact Me</h2>
-        <p class="section-subtitle">
-            Have a project or just want to say hi? 👋
-        </p>
-
-        <form class="contact-form" id="contact-form">
-            <div class="form-group">
-                <input type="text" name="name" required>
-                <label>Your Name</label>
-            </div>
-
-            <div class="form-group">
-                <input type="email" name="email" required>
-                <label>Your Email</label>
-            </div>
-
-            <div class="form-group">
-                <textarea name="message" rows="5" required></textarea>
-                <label>Your Message</label>
-            </div>
-
-            <button type="submit" class="btn submit-btn">
-                Send Message
-            </button>
-        </form>
-    </section>
-
     <footer class="footer">
-        <p>Designed & Built by Abhinav Mishra ❤️</p>
-        <p>© 2025 All rights reserved</p>
+        <div class="footer-orb" aria-hidden="true"></div>
+        <a class="logo" href="#home"><span class="logo-mark">AM</span><span class="logo-name">Abhinav Mishra</span></a>
+        <div>
+            <p>Designed &amp; Built by Abhinav Mishra ❤️</p>
+            <p>© 2025 All rights reserved</p>
+        </div>
+        <a class="back-to-top" href="#home">Back to top <span>↑</span></a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
-
     <script defer src="/_vercel/insights/script.js"></script>
-
 </body>
 
 </html>
