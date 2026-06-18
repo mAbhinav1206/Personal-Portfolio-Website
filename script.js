@@ -187,7 +187,7 @@ const projects = {
     },
     3: {
         title: "Portfolio Website",
-        image: "Assets/PortfolioWebsite.png",
+        image: "Assets/PortfolioMain.png",
         description: "Animated personal portfolio with EmailJS contact form and smooth UX.",
         tech: ["HTML", "CSS", "JavaScript", "EmailJS"],
         live: "https://abhinavmishraportfolio.vercel.app/",
