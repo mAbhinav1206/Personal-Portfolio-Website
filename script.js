@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const mobileViewport = window.matchMedia("(max-width: 768px)");
 
     /* Navigation */
     const navbar = document.getElementById("navbar");
@@ -201,10 +202,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const orbit = document.querySelector(".orbit");
     const orbitItems = [...document.querySelectorAll(".orbit-item")];
     let orbitAngle = 0;
+    let orbitFrame;
 
     function renderOrbit() {
         if (!orbit || !orbitItems.length) return;
-        const radius = orbit.getBoundingClientRect().width * 0.46;
+        cancelAnimationFrame(orbitFrame);
+        const mobile = mobileViewport.matches;
+        const radius = orbit.getBoundingClientRect().width * (mobile ? 0.36 : 0.46);
         const step = (Math.PI * 2) / orbitItems.length;
 
         orbitItems.forEach((item, index) => {
@@ -215,13 +219,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (!reducedMotion) {
-            orbitAngle += 0.0035;
-            requestAnimationFrame(renderOrbit);
+            orbitAngle += mobile ? 0.0016 : 0.0035;
+            orbitFrame = requestAnimationFrame(renderOrbit);
         }
     }
 
     renderOrbit();
-    window.addEventListener("resize", () => reducedMotion && renderOrbit(), { passive: true });
+    window.addEventListener("resize", renderOrbit, { passive: true });
+    mobileViewport.addEventListener?.("change", renderOrbit);
 
     /* Pointer parallax and spotlights */
     const heroVisual = document.querySelector(".hero-visual");
