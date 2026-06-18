@@ -645,6 +645,10 @@ img {
     box-shadow: 0 0 16px var(--primary);
 }
 
+.orbit-ring-one {
+    animation: ring-spin 38s linear infinite;
+}
+
 .orbit-ring-two {
     inset: 76px;
     border-style: dashed;
