@@ -646,7 +646,7 @@ img {
 }
 
 .orbit-ring-one {
-    animation: ring-spin 38s linear infinite;
+    animation: ring-spin 15s linear infinite;
 }
 
 .orbit-ring-two {
