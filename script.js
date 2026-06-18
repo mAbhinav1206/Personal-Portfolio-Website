@@ -125,6 +125,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    /* ================= PROJECT CARD INTERACTIONS ================= */
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach((card, index) => {
+        card.style.setProperty("--reveal-delay", `${index * 90}ms`);
+
+        card.addEventListener("pointermove", (event) => {
+            if (event.pointerType === "touch") return;
+
+            const rect = card.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+            card.style.setProperty("--mouse-x", `${x}%`);
+            card.style.setProperty("--mouse-y", `${y}%`);
+        });
+    });
+
+    const projectRevealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    projectCards.forEach(card => projectRevealObserver.observe(card));
+
     /* ================= EMAILJS CONTACT FORM ================= */
     if (typeof emailjs !== "undefined") {
         emailjs.init("l6eAlSEiFQbx76z8Z");
@@ -164,84 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("EmailJS not loaded");
     }
 
-});
-
-/* ================= PROJECT MODAL ================= */
-
-const projects = {
-    1: {
-        title: "Assignment Portal",
-        image: "Assets/AssignifyDashboard.png",
-        description: "A full-stack assignment submission portal with authentication and email notifications.",
-        tech: ["React", "Tailwind CSS", "EmailJS", "Node.js", "MongoDB"],
-        live: "#",
-        git: "https://github.com/mAbhinav1206/Assignify---an-assignment-portal.git"
-    },
-    2: {
-        title: "WorKo",
-        image: "Assets/WorKo.png",
-        description: "An on-demand home service app with real-time tracking and payment integration.",
-        tech: ["React", "Tailwind"],
-        live: "#",
-        git: "#"
-    },
-    3: {
-        title: "Portfolio Website",
-        image: "Assets/PortfolioWebsite.png",
-        description: "Animated personal portfolio with EmailJS contact form and smooth UX.",
-        tech: ["HTML", "CSS", "JavaScript", "EmailJS"],
-        live: "https://abhinavmishraportfolio.vercel.app/",
-        git: "https://github.com/mAbhinav1206/Personal-Portfolio-Website"
-    },
-    4: {
-        title: "Electrical Shop Website",
-        image: "Assets/ElectricalShop.png",
-        description: "A full-stack working website for electrical shop for ordering electrical items via whatsapp, made with Typescript, tailwind & Supabase.",
-        tech: ["Typescript", "Tailwind", "Supabase", "Vercel"],
-        live: "https://shreebalajielectricals.vercel.app/",
-        git: "https://github.com/mAbhinav1206/ElectricalShopWebsite"
-    }
-};
-
-const modal = document.getElementById("projectModal");
-const modalImage = document.getElementById("modalImage");
-const modalTitle = document.getElementById("modalTitle");
-const modalDescription = document.getElementById("modalDescription");
-const modalTech = document.getElementById("modalTech");
-const modalLive = document.getElementById("modalLive");
-const modalGit = document.getElementById("modalGit");
-
-document.querySelectorAll(".project-card").forEach(card => {
-    card.addEventListener("click", () => {
-        const data = projects[card.dataset.project];
-
-        modalImage.src = data.image;
-        modalTitle.textContent = data.title;
-        modalDescription.textContent = data.description;
-        modalLive.href = data.live;
-        modalGit.href = data.git;
-
-        modalTech.innerHTML = "";
-        data.tech.forEach(t => {
-            const span = document.createElement("span");
-            span.textContent = t;
-            modalTech.appendChild(span);
-        });
-
-        modal.classList.add("active");
-    });
-});
-
-document.querySelector(".close-modal").addEventListener("click", () => {
-    modal.classList.remove("active");
-});
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.classList.remove("active");
-});
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") modal.classList.remove("active");
 });
 
 // Resume Download
