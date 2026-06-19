@@ -1339,92 +1339,126 @@ img {
 }
 
 /* Certificates */
-.certificate-empty {
-    position: relative;
-    min-height: 250px;
-    padding: clamp(30px, 5vw, 58px);
+.certificates-grid {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 45px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+}
+
+.certificate-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(280px, .9fr) minmax(0, 1fr);
+    gap: clamp(22px, 4vw, 42px);
+    align-items: stretch;
+    padding: 14px;
     overflow: hidden;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     background: linear-gradient(120deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .015));
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+    transition: transform 350ms var(--ease), border-color 350ms ease, box-shadow 350ms ease;
 }
 
-.certificate-empty::after {
+.certificate-card::before {
     content: "";
     position: absolute;
-    right: -130px;
-    top: -180px;
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    background: rgba(108, 99, 255, .08);
-    filter: blur(90px);
+    inset: 1px;
+    border-radius: calc(var(--radius-lg) - 1px);
+    background: linear-gradient(135deg, rgba(164, 90, 255, .08), transparent 48%);
+    pointer-events: none;
 }
 
-.certificate-stack {
+.certificate-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(164, 90, 255, .3);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .3), 0 0 30px rgba(164, 90, 255, .08);
+}
+
+.certificate-preview {
     position: relative;
-    width: 170px;
-    height: 125px;
+    z-index: 1;
+    min-height: 255px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: calc(var(--radius-lg) - 10px);
+    background: #f6f7fb;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .24);
 }
 
-.certificate-stack span {
-    position: absolute;
-    inset: 0;
-    border: 1px solid rgba(255, 255, 255, .12);
-    border-radius: 16px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .025));
-    box-shadow: 0 18px 40px rgba(0, 0, 0, .3);
+.certificate-preview img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: left center;
+    transition: transform 600ms var(--ease), filter 400ms ease;
 }
 
-.certificate-stack span:nth-child(1) {
-    transform: rotate(-8deg) translate(-10px, 7px);
-    opacity: .45;
+.certificate-card:hover .certificate-preview img {
+    transform: scale(1.035);
+    filter: saturate(1.04) contrast(1.02);
 }
 
-.certificate-stack span:nth-child(2) {
-    transform: rotate(6deg) translate(10px, 2px);
-    opacity: .7;
+.certificate-content {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    padding: clamp(18px, 4vw, 34px) clamp(8px, 2vw, 22px) clamp(18px, 4vw, 34px) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.certificate-stack span:nth-child(3)::after {
-    content: "✦";
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    color: var(--primary);
-    font-size: 2rem;
-    text-shadow: 0 0 24px var(--primary);
-}
-
-.certificate-empty h3 {
-    margin: 9px 0 7px;
-    font-size: clamp(1.3rem, 2.2vw, 2rem);
+.certificate-content h3 {
+    margin: 9px 0 10px;
+    max-width: 620px;
+    font-size: clamp(1.35rem, 2.5vw, 2.25rem);
+    line-height: 1.12;
     letter-spacing: -.04em;
 }
 
-.certificate-empty div>p:last-child {
+.certificate-content>p:not(.panel-label) {
+    max-width: 520px;
     margin: 0;
     color: var(--muted);
     font-size: .82rem;
+    line-height: 1.7;
 }
 
-.coming-soon {
-    position: relative;
-    z-index: 1;
+.certificate-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.certificate-meta span,
+.certificate-meta a {
+    min-height: 36px;
     padding: 8px 12px;
-    border: 1px solid rgba(108, 99, 255, .22);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid rgba(164, 90, 255, .22);
     border-radius: 999px;
-    background: rgba(108, 99, 255, .08);
-    color: #ada8ff;
+    background: rgba(164, 90, 255, .08);
+    color: #cdb8ff;
     font-family: var(--mono);
     font-size: .62rem;
     white-space: nowrap;
+}
+
+.certificate-meta a {
+    text-decoration: none;
+    transition: 260ms ease;
+}
+
+.certificate-meta a:hover {
+    border-color: rgba(164, 90, 255, .42);
+    background: rgba(164, 90, 255, .14);
 }
 
 /* Profiles */
