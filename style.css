@@ -2305,6 +2305,22 @@ img {
         min-height: 145px;
     }
 
+    .certificate-card {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-preview {
+        min-height: 190px;
+    }
+
+    .certificate-preview img {
+        object-position: center 20%;
+    }
+
+    .certificate-content {
+        padding: 0 4px 14px 4px;
+    }
+
     .certificate-empty {
         grid-template-columns: 1fr;
         gap: 28px;
