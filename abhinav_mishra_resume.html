@@ -307,6 +307,41 @@ ul.bul li strong {
   font-weight: 300;
 }
 
+/* ─── CERTIFICATIONS ─── */
+.cert-item { margin-bottom: 10px; padding-left: 10px; position: relative; }
+.cert-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 3px; bottom: 3px;
+  width: 2px;
+  background: var(--rule);
+  border-radius: 2px;
+}
+.cert-item:last-child { margin-bottom: 0; }
+.cert-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+.cert-name {
+  font-size: 9.8pt;
+  font-weight: 600;
+  color: var(--ink);
+}
+.cert-meta {
+  font-size: 8.4pt;
+  color: var(--faint);
+  white-space: nowrap;
+}
+.cert-sub {
+  font-size: 8.8pt;
+  color: var(--mid);
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
 /* ─── FOOTER STRIP ─── */
 .footer-strip {
   margin-top: 20px;
@@ -341,13 +376,12 @@ ul.bul li strong {
 <header class="header">
   <div class="name-block">
     <div class="name">Abhinav Mishra</div>
-    <div class="title-line"><pre>AI Engineer &
-Full-Stack Developer</pre></div>
+    <div class="title-line">Software Engineer &nbsp;·&nbsp; Full-Stack Developer</div>
   </div>
   <div class="contact-col">
     <div class="contact-row">
       <a href="mailto:mabhinav1206@gmail.com">mabhinav1206@gmail.com</a>
-      <span>+91 88409 XXXXX</span>
+      <span>+91 88409 45526</span>
     </div>
     <div class="contact-row">
       <a href="https://www.linkedin.com/in/abhinavmishra1206/" target="_blank">LinkedIn ↗</a>
@@ -408,7 +442,6 @@ Full-Stack Developer</pre></div>
       <li>Designed end-to-end pipelines for assignment creation, submission, and grading, eliminating manual coordination through a structured database-driven interface.</li>
       <li>Modelled a <strong>MongoDB schema</strong> for users, assignments, and submissions, optimising document structure for fast reads across role-filtered queries.</li>
       <li>Wired <strong>EmailJS</strong> for automated transactional notifications — new-assignment alerts to students and submission receipts to instructors — without a dedicated mail server.</li>
-      <li>Built a <strong>mobile-first responsive UI</strong> with Tailwind CSS, maintaining layout consistency across all viewport breakpoints.</li>
     </ul>
   </div>
 
@@ -437,9 +470,6 @@ Full-Stack Developer</pre></div>
   <div class="project">
     <div class="project-top">
       <span class="project-name">Worko — On-Demand Home Services Application</span>
-      <div class="project-links">
-        <a href="https://github.com/aayushchoudhury111-hue/Worko" target="_blank">GitHub ↗</a>
-      </div>
     </div>
     <div class="tag-row">
       <span class="tag">React</span><span class="tag">Tailwind CSS</span><span class="tag">React Hooks</span><span class="tag">Component Architecture</span>
@@ -448,7 +478,6 @@ Full-Stack Developer</pre></div>
       <li>Developed a service-discovery and booking SPA connecting customers with home-service providers through category browsing and request scheduling.</li>
       <li>Engineered a <strong>multi-step booking flow</strong> driven entirely by React state and custom hooks, maintaining zero-dependency client-side logic.</li>
       <li>Composed a <strong>scalable atomic component library</strong> — service cards, category filters, booking forms — enabling rapid feature iteration without layout regression.</li>
-      <li>Delivered a pixel-perfect responsive UI optimised for touch interaction, consistent across mobile, tablet, and desktop breakpoints.</li>
     </ul>
   </div>
 
@@ -479,7 +508,7 @@ Full-Stack Developer</pre></div>
   <table class="skills-table">
     <tr>
       <td>Languages</td>
-      <td>Java &nbsp;·&nbsp; JavaScript (ES2022+) &nbsp;·&nbsp; TypeScript</td>
+      <td>Java &nbsp;·&nbsp; JavaScript (ES2022+) &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; Swift</td>
     </tr>
     <tr>
       <td>Frontend</td>
@@ -492,6 +521,10 @@ Full-Stack Developer</pre></div>
     <tr>
       <td>Databases</td>
       <td>MongoDB &nbsp;·&nbsp; Supabase (PostgreSQL)</td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>iOS Development &nbsp;·&nbsp; UIKit &nbsp;·&nbsp; Xcode &nbsp;·&nbsp; Auto Layout &nbsp;·&nbsp; Core Data</td>
     </tr>
     <tr>
       <td>Tools &amp; Platforms</td>
@@ -514,6 +547,23 @@ Full-Stack Developer</pre></div>
   <div class="achieve-row">
     <div class="ach-platform"><a href="https://codeforces.com/profile/Abhinavmishra1206" target="_blank">Codeforces</a></div>
     <div class="ach-text">Participates in rated rounds; strengthens greedy, graph traversal, and number theory skills through regular contest submissions and post-contest editorial review.</div>
+  </div>
+</section>
+
+<!-- ══════ CERTIFICATIONS ══════ -->
+<section>
+  <div class="section-label"><span>Certifications</span></div>
+  <div class="cert-item">
+    <div class="cert-top">
+      <span class="cert-name">iOS &amp; Swift — The Complete iOS App Development Bootcamp</span>
+      <span class="cert-meta">June 2026 &nbsp;·&nbsp; 60.5 hrs</span>
+    </div>
+    <div class="cert-sub">Udemy &nbsp;·&nbsp; Instructor: Dr. Angela Yu</div>
+    <ul class="bul">
+      <li>Comprehensive training in native iOS application development using Swift and Xcode.</li>
+      <li>Covered UIKit, Auto Layout, networking, APIs, Core Data, and app deployment fundamentals.</li>
+      <li>Built multiple real-world iOS applications following Apple's development practices and guidelines.</li>
+    </ul>
   </div>
 </section>
 
